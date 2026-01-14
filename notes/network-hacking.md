@@ -1,6 +1,7 @@
 ## Pre-connection Attacks
 
 **Changing MAC address**
+
 Bring down the interface:
 ifconfig wlan0 down
 ifconfig wlan0 hw ether <new mac address>. ensure to start with 00
