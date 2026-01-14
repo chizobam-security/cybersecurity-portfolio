@@ -6,18 +6,24 @@ Bring down the interface:
 
 ifconfig wlan0 down
 
-ifconfig wlan0 hw ether <new mac address>. ensure to start with 00
+ifconfig wlan0 hw ether <new mac-address>. ensure to start with 00
 
 ifconfig wlan0 up ✅
 
 **Note: MAC address will revert back to original after a restart**
 
 **To set an adapter to monitor mode:**
+
 iwconfig
+
 ifconfig wlan0 down
+
 aimon-ng check kill
+
 iwconfig wlan0 mode monitor
+
 ifconfig wlan0 up  ✅
+
 So all we need right now is a program that can capture these packets for us. The program that we're going to use is called Airodump-NG. It's part of the Aircrack-NG suit, and it's a packet-sniffer, so it's basically a program designed to capture packets while you're in monitor mode. So it will allow us to see all the wireless networks around us, and show us detailed information about its MAC address.
 
 **To run airodump-ng:**
