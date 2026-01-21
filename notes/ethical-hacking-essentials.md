@@ -77,8 +77,8 @@ Technical Skills
 Non-Technical Skills
 - Ethics and Integrity
 - Empathy & Collaboration
-- Communication & Reporting
 - Persistence and Adaptability
+- Communication & Reporting
 - Ability to learn and adopt new technologies quickly
 - Analytical problem solving: When an exploit fails, can you logically deduce why? Is it a firewall, an EDR, or just a syntax error in your code?
 - Critical Thinking & Creativity: Thinking Outside the Box: Attackers don't follow rules. You need the creativity to see a system not as it should work, but as it could work if pushed.
