@@ -70,7 +70,7 @@ Skills of an Ethical Hacker
 Technical Skills
 - Operating System Proficiency: Linux/Unix(CLI, shell scripting etc.) Windows & Active Directory(powershell)
 - Networking Fundamentals: Protocols(HTTPs, OSI model, TCP/IP, DNS, SNMP etc), Packet Analysis(Wireshark, TCPDUMP), Intrastructure (router, switches firewall etc)
-- Programming and Scripting: Python(for security automation and exploit development), JavaScript(for finding vulnerabilities in web browser and application), SQL(for tseting and preventing SQL injection)
+- Programming and Scripting: Python(for security automation and exploit development), JavaScript(for finding vulnerabilities in web browser and application), SQL(for testing and preventing SQL injection)
 - Web Application Security
 - Specialized Security Disciplines: cryptography, cloud security, vulnerability assessment, AI and machine learning etc
 
