@@ -89,8 +89,29 @@ A threat is the danger waiting to happen.
 - Threat: The actor or event that can take advantage of that weakness (e.g., a burglar).
 - Risk: The probability that the threat will find the vulnerability and cause damage (e.g., the likelihood of a break-in)
 
-Different Ways for Malware to Enter a System
-- Advanced Social Engineering:
+Different Ways for Malware to Enter a System(infection Vector)
+- Email attachments & links
+- Drive-by downloads
+- Infected removable media
+- Malicious downloads from untrusted sites: music, movie games, screensaver etc
+- Social engineering & phishing
+- Malvertising: Online ads with malicious code
+- File sharing & P2P platforms
+- Software vulnerabilities
+- Trojanized Software: Modified legitimate software
+- Watering Hole
+
+Types of Malware
+- Viruses
+- Worms
+- Trojans
+- Spyware: Secretly collects data
+- Ransomware
+- Botnet
+- Adware: May not be destructive
+- Keylogger
+- Rootkit: Provides unauthorized access & control(backdoor). Dificult to detect and remove
+- Wiper malware: Delete or destroy data without recovery.
 
 
 
