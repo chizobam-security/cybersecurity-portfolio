@@ -89,7 +89,7 @@ A threat is the danger waiting to happen.
 - Threat: The actor or event that can take advantage of that weakness (e.g., a burglar).
 - Risk: The probability that the threat will find the vulnerability and cause damage (e.g., the likelihood of a break-in)
 
-Different Ways for Malware to Enter a System(infection Vector)
+## Different Ways for Malware to Enter a System(infection Vector)
 - Email attachments & links
 - Drive-by downloads
 - Infected removable media
@@ -101,7 +101,7 @@ Different Ways for Malware to Enter a System(infection Vector)
 - Trojanized Software: Modified legitimate software
 - Watering Hole
 
-Types of Malware
+## Types of Malware
 - Viruses
 - Worms
 - Trojans
@@ -121,8 +121,19 @@ Types of Malware
 ## Vulnerability
 In a network, there are generally two main causes for systems being vulnerable: (1) software or hardware misconfiguration and (2) poor programming practices
 
-Common Reasons behind the existence of Vulnerability
+Common Reasons Behind the Existence of Vulnerability
 - Hardware or software misconfiguration
 - Insecure or poor design of the network and application
 - Inherent technological weakness
 - Careless approach of end users
+
+Vulnerability Assessment: Identify weaknesses that could be exploited.
+Vulnerability scans can also be performed on applicable compliance templates to assess the organization’s Infrastructure weaknesses against the respective compliance guidelines.
+Vulnerabilities scanning tools includes: Nessus, Qualys, GFI LanGuard, and OpenVAS. 
+
+The vulnerability management life cycle is an important process that helps identify and remediate security weaknesses before they can be exploited.
+- Identify Assets and Create a Baseline: This phase identifies critical assets and prioritizes them to define the risk based on the criticality and value of each system
+- Vulnerability Scan:  Vulnerability scan on the network to identify the known vulnerabilities in the organization’s infrastructure
+- Risk Assessment: All serious uncertainties that are associated with the system are assessed and prioritized 
+- Remediation: Remediation is the process of applying fixes on vulnerable systems in order to reduce the impact and severity of vulnerabilities
+- Verification: The security team performs a re-scan of systems to assess if the required remediation is complete and whether the individual fixes have been applied to the impacted assets
