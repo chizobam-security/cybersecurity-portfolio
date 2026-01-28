@@ -84,7 +84,7 @@ I am actively seeking a **cybersecurity internship** where I can learn from expe
 - 👉 [Screenshots](screenshots/)
 - ## Featured Projects
 
-- **Secure Cloud Deployment of PrestaShop on AWS**  
+**Secure Cloud Deployment of PrestaShop on AWS**  
   Deployed an open-source e-commerce application on AWS using a multi-server architecture with separated database and application layers.  
   👉 [View Project](projects/secure-prestashop-aws-deployment)
 
