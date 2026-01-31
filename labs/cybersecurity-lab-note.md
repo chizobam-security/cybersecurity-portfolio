@@ -1,5 +1,5 @@
 # Cybersecurity Lab Setup: Kali Linux & Cowrie Honeypot
-This repository documents the technical setup of a local cybersecurity laboratory environment. The lab consists of an Attacker Machine (Kali Linux) and a Victim/Honeypot Machine (Cowrie on Debian 12), both running on VMware Workstation Pro. It also documents key challenges encountered and how they were resolved.
+This repository documents the technical setup of a local cybersecurity laboratory environment. The lab consists of an Attacker Machine (Kali Linux) and a Victim/Honeypot Machine (Cowrie on Debian 13), both running on VMware Workstation Pro. It also documents key challenges encountered and how they were resolved.
 ## 1. Attacker Environment: Kali Linux
 ### Installation Process
 1. **Installing VMware Workstation Pro (Host Setup)**
@@ -35,7 +35,7 @@ This repository documents the technical setup of a local cybersecurity laborator
 
 2. ## Victim Environment: Cowrie Honeypot
 **Server Setup**
-- OS: Debian 12 "netinst" ISO (amd64).
+- OS: Debian 13 "netinst" ISO (amd64).
 - Downloaded from the official Debian site: ```https://www.debian.org/distrib/netinst```
 
 **Installation Steps**
