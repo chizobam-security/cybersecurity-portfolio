@@ -40,15 +40,23 @@ This repository documents the technical setup of a local cybersecurity laborator
 - Installation: Performed a standard Graphical Install.
 
 **Cowrie Installation & Configuration**
-1. Dependencies: ```sudo apt update && sudo apt install git python3-venv libssl-dev libffi-dev build-essential authbind -y```
-2. Environment Setup:
+1. Dependencies:
+   ```sudo apt update && sudo apt install git python3-venv libssl-dev libffi-dev build-essential authbind -y```
+3. Environment Setup:
  ```git clone http://github.com/cowrie/cowrie```
+
 ```cd cowrie```
+
 ```python3 -m venv cowrie-env```
+
 ```source cowrie-env/bin/activate```
+
 ```pip install --upgrade pip```
+
 ```pip install -r requirements.txt```
-3. Configuration: ```cp etc/cowrie.cfg.dist etc/cowrie.cfg```
+
+5. Configuration:
+```cp etc/cowrie.cfg.dist etc/cowrie.cfg```
    
 
 
