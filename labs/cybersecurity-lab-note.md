@@ -52,29 +52,29 @@ This repository documents the technical setup of a local cybersecurity laborator
 
 1. Install Required Dependencies:
 
-   ```sudo apt update && sudo apt install git python3-venv libssl-dev libffi-dev build-essential authbind -y```
-   
+      ```sudo apt update && sudo apt install git python3-venv libssl-dev libffi-dev build-essential authbind -y```
+      
    **Note**: ```sudo apt``` command may not work so you need to install it before you can use it by logging in as root user and using ```apt install sudo -y```
    
    If your Debian VM cannot reach the internet for the installalation, change the VM's **network adapter** setting to **NAT**.
    
 2. Clone Cowrie and Set Up Virtual Environment:
-
- ```git clone http://github.com/cowrie/cowrie```
-
-```cd cowrie```
-
-```python3 -m venv cowrie-env```
-
-```source cowrie-env/bin/activate```
-
-```pip install --upgrade pip```
-
-```pip install -r requirements.txt```
+   
+   ```git clone http://github.com/cowrie/cowrie```
+   
+   ```cd cowrie```
+   
+   ```python3 -m venv cowrie-env```
+   
+   ```source cowrie-env/bin/activate```
+   
+   ```pip install --upgrade pip```
+   
+   ```pip install -r requirements.txt```
 
 3. Configure Cowrie:
 
-```cp etc/cowrie.cfg.dist etc/cowrie.cfg```
+   ```cp etc/cowrie.cfg.dist etc/cowrie.cfg```
 
 ### Critical Troubleshooting: "No such file or directory" on Startup
 **Issue**: Attempting to run ```bin/cowrie start``` resulted in a "file not found" error, despite being in the correct directory.
@@ -101,8 +101,8 @@ This repository documents the technical setup of a local cybersecurity laborator
    - VMware hardware compatibility tuning
    - Understanding modern Cowrie deployment workflow
 - Lab is now suitable for:
-   - SSH attack simulation
    - Log analysis
+   - SSH attack simulation
    - Honeypot research and learning
    - Running **Nmap** scans from Kali to detect the Cowrie SSH service.
    - Initiating brute-force attacks to populate Cowrie logs.
