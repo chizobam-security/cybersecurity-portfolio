@@ -89,7 +89,7 @@ This repository documents the technical setup of a local cybersecurity laborator
 
 ## Tools & Technologies Used
 - **Hypervisor**: VMware Workstation Pro 17.x
-- **Attacker OS**: Kali Linux 2025.x
+- **Attacker OS**: Kali Linux 2025.4
 - **Victim OS**: Debian 12 (Bookworm)
 - **Honeypot**: Cowrie (SSH/Telnet)
 - **Networking**: VMware Host-Only Adapter (Internal Lab Network)
