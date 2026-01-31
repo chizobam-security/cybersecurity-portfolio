@@ -43,14 +43,17 @@ This repository documents the technical setup of a local cybersecurity laborator
 - Attach the Debian netinst ISO.
 - Configure minimal hardware resources.
 - Start the VM and use the **Graphical Installer.**
+- 
 **Install only:**
 - Standard system utilities
 - (No desktop environment)
 
 **Cowrie Installation & Configuration**
+
 1.Install Required Dependencies:
 
    ```sudo apt update && sudo apt install git python3-venv libssl-dev libffi-dev build-essential authbind -y```
+   
    **Note**: ```sudo apt``` command may not work so you need to install it before you can use it by logging in as root user and using ```apt install sudo -y```
    If your Debian VM cannot reach the internet for the installalation, change the VM's **network adapter** setting to **NAT**.
    
