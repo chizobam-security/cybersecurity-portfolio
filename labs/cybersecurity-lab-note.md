@@ -50,7 +50,7 @@ This repository documents the technical setup of a local cybersecurity laborator
 
 **Cowrie Installation & Configuration**
 
-1.Install Required Dependencies:
+1. Install Required Dependencies:
 
    ```sudo apt update && sudo apt install git python3-venv libssl-dev libffi-dev build-essential authbind -y```
    
@@ -58,7 +58,7 @@ This repository documents the technical setup of a local cybersecurity laborator
    
    If your Debian VM cannot reach the internet for the installalation, change the VM's **network adapter** setting to **NAT**.
    
-3.Clone Cowrie and Set Up Virtual Environment:
+2. Clone Cowrie and Set Up Virtual Environment:
 
  ```git clone http://github.com/cowrie/cowrie```
 
@@ -72,7 +72,7 @@ This repository documents the technical setup of a local cybersecurity laborator
 
 ```pip install -r requirements.txt```
 
-5. Configure Cowrie:
+3. Configure Cowrie:
 
 ```cp etc/cowrie.cfg.dist etc/cowrie.cfg```
 
