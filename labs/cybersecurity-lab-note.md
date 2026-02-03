@@ -5,7 +5,7 @@ This repository documents the technical setup of a local cybersecurity laborator
 1. **Installing VMware Workstation Pro (Host Setup)**
 
 **Steps**
-- Visit the Broadcom Support Portal.
+- Visit the Broadcom Support Portal: https://support.broadcom.com/web/ecx
 - Create an account and log in.
 - Navigate to My Downloads.
 - Search for VMware Workstation.
