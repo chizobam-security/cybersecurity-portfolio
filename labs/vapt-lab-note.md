@@ -17,8 +17,11 @@ This project demonstrates a full-cycle vulnerability management process, includi
 To ensure a clean and repeatable environment, I deployed DVWA using Docker:
 
 Update your Machine ```sudo apt update && sudo apt upgrade -y```
+
 Install Docker ```sudo apt install docker.io -y```
+
 Run DVWA:```sudo docker run --rm -it -p 80:80 vulnerables/web-dvwa```
+
 Access DVWA in Browser: Open browser and type ```http://localhost``` and login with ```admin/password```
 
 **After logging in**:
