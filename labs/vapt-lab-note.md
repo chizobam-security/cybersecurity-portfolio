@@ -12,7 +12,7 @@ This lab documents the setup of a deliberately vulnerable web application (DVWA)
 **OpenVAS (GVM)**: For automated vulnerability scanning.
 
 ### Lab Setup & Configurations
-Target Environment (DVWA)
+**Target Environment (DVWA)**
 
 To ensure a clean and repeatable environment, I deployed DVWA using Docker:
 
