@@ -74,9 +74,9 @@ Since this was a new installation, I performed a "hard reset" of the PostgreSQL 
 
 1. **Stop Services**: ```sudo systemctl stop postgresql```
 
-2. **Drop Broken Cluster**: ```sudo pg_dropcluster --stop 17 main```
+2. **Drop Broken Cluster**: ```sudo pg_dropcluster --stop 18 main```(Note: replace 18 with your version number, if you don't know it, run ```pg_lsclusters```
 
-3. **Recreate Clean Cluster**: ```sudo pg_createcluster 18 main --start``` (Note: replace 18 with your version number, if you don't know, run ```pg_lsclusters```
+3. **Recreate Clean Cluster**: ```sudo pg_createcluster 18 main --start``` 
 4. **Restart the service**: ```sudo systemctl start postgresql```
 5. **Run the GVM database creation script**: ```sudo runuser -u postgres -- /usr/share/gvm/create-postgresql-database```
 6. **Re-initialize GVM setup**: ```sudo gvm-setup``` (Note: This might take 20–30 minutes)
