@@ -36,7 +36,7 @@ Once you see **Database has been created**, DVWA is ready
 
 ### Vulnerability Scanner (OpenVAS/GVM)
 
-Minimum VMware Requirements 
+**Minimum VMware Requirements**
 
 Before installing OpenVAS, shut down Kali and set:
 
@@ -50,9 +50,11 @@ Network: NAT
 
 OpenVAS is heavy, under-resourcing causes silent failures.
 
-1. Install GVM: ```sudo apt install gvm -y
-2. Run initial setup: ```sudo gvm-setup``` (This may take a while and provide a password, copy it down)
-3. Verify setup: ```sudo gvm-check-setup```
+**Steps**
+
+1. **Install GVM**: ```sudo apt install gvm -y```
+2. **Run initial setup**: ```sudo gvm-setup``` (This may take a while and provide a password, copy it down)
+3. **Verify setup**: ```sudo gvm-check-setup```
 
 ### Challenges & Resolutions
 During the setup of the OpenVAS scanner, I encountered a critical database synchronization issue.
