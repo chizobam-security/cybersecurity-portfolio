@@ -64,9 +64,12 @@ When running ```sudo gvm-check-setup```, the process failed with the following e
 
 ```ERROR: template database "template1" has a collation version mismatch DETAIL: The template database was created using collation version 2.41, but the operating system provides version 2.42.```
 
-**Root Cause**: The Kali Linux system libraries (libc) were updated, but the existing PostgreSQL database cluster was still configured for an older version. This prevented the creation of the ```gvmd``` database.
+**Root Cause**
+
+The Kali Linux system libraries (libc) were updated, but the existing PostgreSQL database cluster was still configured for an older version. This prevented the creation of the ```gvmd``` database.
 
 **The Resolution**
+
 Since this was a new installation, I performed a "hard reset" of the PostgreSQL cluster to align it with the system version using the following steps:
 
 1. **Stop Services**: ```sudo systemctl stop postgresql```
