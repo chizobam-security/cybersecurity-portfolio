@@ -11,10 +11,9 @@ This lab documents the setup of a deliberately vulnerable web application (DVWA)
 
 **OpenVAS (GVM)**: For automated vulnerability scanning.
 
-**Metasploit Framework**: For validating and exploiting found vulnerabilities.
-
 ### Lab Setup & Configurations
-1. Target Environment (DVWA)
+Target Environment (DVWA)
+
 To ensure a clean and repeatable environment, I deployed DVWA using Docker:
 
 1. Update your Machine ```sudo apt update && sudo apt upgrade -y```
