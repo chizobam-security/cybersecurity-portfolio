@@ -1,5 +1,5 @@
 # Information Security Fundamentals
-Information security is state where the possiblility of tampering, theft or distruption of information or services on a system is low or tolerable.
+Information security is a state where the possiblility of tampering, theft or distruption of information or services on a system is low or tolerable.
 
 ### Elements of information security includes:
 - Confidentiality: Assurance that the information is accessible only to those authorized to have access
