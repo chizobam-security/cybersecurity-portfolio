@@ -53,7 +53,7 @@ OpenVAS is heavy, under-resourcing causes silent failures.
 **Steps**
 
 1. **Install GVM**: ```sudo apt install gvm -y```
-2. **Run initial setup**: ```sudo gvm-setup``` (This may take a while especially if your internet speed is poor. It will provide a password, copy it down)
+2. **Run initial setup**: ```sudo gvm-setup``` (The setup will take about 15-30 minutes. Don't interrupt the ```gvm-setup``` process, even if it seems stuck. It will provide a password, pls copy it down)
 3. **Verify setup**: ```sudo gvm-check-setup```
 
 ### Challenges & Resolutions
