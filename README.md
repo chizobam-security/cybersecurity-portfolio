@@ -42,7 +42,7 @@ To develop practical cybersecurity skills, gain exposure to real-world security 
 ---
 
 ## Mini Projects (Beginner Level)
--  **Network Scanning Lab**  
+-  **Vulnerability Scanning Lab**  
   Vulnerability Scan and Exploit Simulation Using OpenVAS and Metasploit.
 
 - **Security Audit**  
