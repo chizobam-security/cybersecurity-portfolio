@@ -1,4 +1,4 @@
-# 👋 Hi, I’m Chizobam Ileh
+# 👋 Hi, I’m Nnamdi Ileh
 
 ## Cybersecurity Intern | Aspiring Security Analyst
 
@@ -76,6 +76,7 @@ I am actively seeking a **cybersecurity internship** where I can learn from expe
 
 ## Contact
 - Email: peter.chizobam@xultechng.com
+- Email: petersaint515@gmail.com
 
 ## 📁 Explore My Work
 - 👉 [Notes](notes/)
