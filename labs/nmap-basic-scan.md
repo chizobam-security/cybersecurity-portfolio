@@ -29,7 +29,7 @@ I later found out I needed to repeat the scan several times for it to discover a
 
 ![Nmap Scan](../screenshots/quick-scan-plus.png)
 
-**Obervation**: The IOS device in the scan output has an SSH server but by default iOS devices do not have an SSH server. I later found out that when you jailbreak the phone or the device it will automatically install an SSH server.
+**Obervation**: The IOS device in the scan output has an SSH server but by default iOS devices do not have an SSH server. I later found out that when you jailbreak an IOS device it will automatically install an SSH server.
  
 
 ## What I Learned
