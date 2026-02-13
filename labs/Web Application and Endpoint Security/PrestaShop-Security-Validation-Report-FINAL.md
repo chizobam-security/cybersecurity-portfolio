@@ -6,7 +6,7 @@
 **Assessment Date:** February 13, 2026  
 **Application:** PrestaShop 8.1  
 **Environment:** Docker on Kali Linux  
-**Assessor:** [Your Name]  
+**Assessor:** Nnamdi Ileh 
 **Report Version:** 1.0 Final
 
 ---
