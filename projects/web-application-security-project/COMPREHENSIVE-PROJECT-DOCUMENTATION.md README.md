@@ -19,8 +19,6 @@
 10. [Lessons Learned](#lessons-learned)
 11. [Tools & Technologies](#tools--technologies)
 12. [Results & Metrics](#results--metrics)
-13. [Recommendations](#recommendations)
-14. [References](#references)
 
 ---
 
@@ -34,10 +32,9 @@ Conduct a comprehensive security assessment of PrestaShop 8.1 e-commerce platfor
 - Implement security hardening based on OWASP guidelines
 - Configure and deploy WAF with custom rules
 - Simulate real-world attacks using professional penetration testing tools
-- Document findings and provide production recommendations
+- Document findings
 
 ### Timeline
-- **Duration:** 3-4 days
 - **Environment:** Kali Linux with Docker
 - **Application:** PrestaShop 8.1
 - **Completion Date:** February 13, 2026
@@ -80,41 +77,41 @@ Medium Issues:  15   =>   2  (87% reduction)
 ### Final System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────────── ┐
 │                     Kali Linux Host                          │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │              Docker Environment                        │  │
-│  │                                                         │  │
-│  │  ┌─────────────────────────────────────────────────┐  │  │
-│  │  │         Apache Web Server (Port 80)             │  │  │
-│  │  │  ┌──────────────────────────────────────────┐   │  │  │
-│  │  │  │    WAF Layer (.htaccess rules)           │   │  │  │
-│  │  │  │  • SQL Injection Protection              │   │  │  │
-│  │  │  │  • XSS Protection                        │   │  │  │
-│  │  │  │  • Path Traversal Protection             │   │  │  │
-│  │  │  │  • Command Injection Protection          │   │  │  │
-│  │  │  │  • Rate Limiting                         │   │  │  │
-│  │  │  │  • Security Headers                      │   │  │  │
-│  │  │  └──────────────────────────────────────────┘   │  │  │
-│  │  │                    ↓                             │  │  │
-│  │  │  ┌──────────────────────────────────────────┐   │  │  │
-│  │  │  │      PrestaShop 8.1 Application          │   │  │  │
-│  │  │  │  • Hardened Configuration                │   │  │  │
-│  │  │  │  • Protected Directories                 │   │  │  │
-│  │  │  │  • Renamed Admin Panel                   │   │  │  │
-│  │  │  │  • Debug Mode Disabled                   │   │  │  │
-│  │  │  └──────────────────────────────────────────┘   │  │  │
-│  │  └─────────────────────────────────────────────────┘  │  │
-│  │                                                         │  │
-│  │  ┌─────────────────────────────────────────────────┐  │  │
-│  │  │           MySQL 8.0 Database                    │  │  │
-│  │  │  • Isolated Network                             │  │  │
-│  │  │  • Restricted Privileges                        │  │  │
-│  │  │  • Strong Authentication                        │  │  │
-│  │  └─────────────────────────────────────────────────┘  │  │
-│  └───────────────────────────────────────────────────────┘  │
+│  ┌───────────────────────────────────────────────────────┐   │
+│  │              Docker Environment                       │   │
+│  │                                                       │   │
+│  │  ┌─────────────────────────────────────────────────┐  │   │
+│  │  │         Apache Web Server (Port 80)             │  │   │
+│  │  │  ┌──────────────────────────────────────────┐   │  │   │
+│  │  │  │    WAF Layer (.htaccess rules)           │   │  │   │
+│  │  │  │  • SQL Injection Protection              │   │  │   │
+│  │  │  │  • XSS Protection                        │   │  │   │
+│  │  │  │  • Path Traversal Protection             │   │  │   │
+│  │  │  │  • Command Injection Protection          │   │  │   │
+│  │  │  │  • Rate Limiting                         │   │  │   │
+│  │  │  │  • Security Headers                      │   │  │   │
+│  │  │  └──────────────────────────────────────────┘   │  │   │
+│  │  │                    ↓                            │  │   │
+│  │  │  ┌──────────────────────────────────────────┐   │  │   │
+│  │  │  │    PrestaShop 8.1 Application            │   │  │   │
+│  │  │  │  • Hardened Configuration                │   │  │   │
+│  │  │  │  • Protected Directories                 │   │  │   │
+│  │  │  │  • Renamed Admin Panel                   │   │  │   │
+│  │  │  │  • Debug Mode Disabled                   │   │  │   │
+│  │  │  └──────────────────────────────────────────┘   │  │   │
+│  │  └─────────────────────────────────────────────────┘  │   │
+│  │                                                       │   │
+│  │  ┌─────────────────────────────────────────────────┐  │   │
+│  │  │    MySQL 8.0 Database                           │  │   │
+│  │  │  • Isolated Network                             │  │   │
+│  │  │  • Restricted Privileges                        │  │   │
+│  │  │  • Strong Authentication                        │  │   │
+│  │  └─────────────────────────────────────────────────┘  │   │
+│  └───────────────────────────────────────────────────────┘   │
 │                                                              │
-│  Testing Tools: SQLMap, Burp Suite, OWASP ZAP, Nikto       │
+│  Testing Tools: SQLMap, Burp Suite, OWASP ZAP, Nikto         │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -645,8 +642,6 @@ the attribute `version` is obsolete, it will be ignored
 
 **Solution:**
 - Warning is harmless and can be ignored
-- Optionally remove `version: '3.8'` line
-- Or use `docker compose` (no hyphen) instead of `docker-compose`
 
 **Lesson Learned:** Keep up with Docker Compose syntax changes
 
@@ -732,7 +727,7 @@ RewriteRule ^.*$ - [F,L]
 Initial tests showed HTTP 000 instead of 403:
 
 ```bash
-curl "http://localhost/?id=1' OR '1'='1"
+curl "http://localhost:8080/?id=1' OR '1'='1"
 # Result: HTTP 000 (no response)
 ```
 
@@ -743,10 +738,10 @@ Use URL encoding instead:
 
 ```bash
 # Wrong (shell interprets quotes):
-curl "http://localhost/?id=1' OR '1'='1"
+curl "http://localhost:8080/?id=1' OR '1'='1"
 
 # Correct (URL encoded):
-curl "http://localhost/?id=1%27%20OR%20%271%27=%271"
+curl "http://localhost:8080/?id=1%27%20OR%20%271%27=%271"
 
 # Result: HTTP 403 Forbidden ✅
 ```
@@ -804,7 +799,7 @@ ls -la /var/www/html/ | grep install
 "
 
 # Verify
-curl -I http://localhost/install-dev/
+curl -I http://localhost:8080/install-dev/
 # Should return: HTTP 404
 ```
 
@@ -891,7 +886,6 @@ systemctl restart apache2
 
 4. **Container Networking**
    - Understand host vs container filesystem
-   - Use proper volume mounts
    - Know where logs actually live
 
 5. **Documentation is Essential**
@@ -930,7 +924,6 @@ systemctl restart apache2
 
 2. **Keep Good Notes**
    - Document what works AND what doesn't
-   - Save error messages
    - Track configuration changes
 
 3. **Incremental Progress**
@@ -949,7 +942,7 @@ systemctl restart apache2
 
 ### Core Technologies
 
-| Technology | Version | Purpose |
+|Technology  | Version | Purpose |
 |------------|---------|---------|
 | **PrestaShop** | 8.1 | E-commerce application |
 | **Apache** | 2.4 | Web server + WAF platform |
@@ -957,7 +950,7 @@ systemctl restart apache2
 | **MySQL** | 8.0 | Database |
 | **Docker** | 24.x | Containerization |
 | **Docker Compose** | 2.x | Container orchestration |
-| **Kali Linux** | 2024.x | Security testing platform |
+| **Kali Linux** | 2025.4x | Security testing platform |
 
 ### Security Tools
 
@@ -967,7 +960,6 @@ systemctl restart apache2
 | **Burp Suite** | Manual penetration testing | Proxy, Repeater, Intruder |
 | **OWASP ZAP** | Automated vulnerability scanning | Spider, Active scan |
 | **Nikto** | Web server scanning | Configuration testing |
-| **Gobuster** | Directory enumeration | Brute force discovery |
 | **curl** | HTTP testing | Request crafting |
 
 ### Custom Scripts
@@ -1013,279 +1005,10 @@ systemctl restart apache2
 └─────────────────────────────────────────────────┘
 ```
 
-### Attack Category Breakdown
-
-**[A1] Injection Attacks: 100% Protection**
-- SQL Injection - Classic: ✅ Blocked
-- SQL Injection - UNION: ✅ Blocked
-- SQL Injection - Boolean Blind: ✅ Blocked
-- SQL Injection - Time-based: ✅ Blocked
-- SQL Injection - Stacked Queries: ✅ Blocked
-
-**[A7] Cross-Site Scripting: 100% Protection**
-- XSS - Script Tag: ✅ Blocked
-- XSS - Event Handler: ✅ Blocked
-- XSS - JavaScript Protocol: ✅ Blocked
-- XSS - DOM-based: ✅ Blocked
-- XSS - SVG Vector: ✅ Blocked
-
-**[BONUS] Command Injection: 100% Protection**
-- Semicolon injection: ✅ Blocked
-- Pipe injection: ✅ Blocked
-- Backtick injection: ✅ Blocked
-
-### Performance Metrics
-
-- **Average Response Time:** <100ms
-- **WAF Processing Overhead:** ~5-10ms
-- **False Positive Rate:** 0%
-- **False Negative Rate:** 11% (3/28 tests)
-
----
-
-## Recommendations
-
-### Immediate Actions (Before Production)
-
-1. **Remove Install Directory Completely**
-   ```bash
-   docker exec prestashop_app rm -rf /var/www/html/install*
-   ```
-
-2. **Implement SSL/TLS**
-   ```bash
-   # Obtain SSL certificate (Let's Encrypt recommended)
-   # Configure Apache for HTTPS
-   # Force HTTPS redirect
-   ```
-
-3. **Configure Centralized Logging**
-   ```bash
-   # Set up syslog forwarding
-   # Or implement ELK stack
-   # Enable log rotation
-   ```
-
-### Short-Term Enhancements (30 Days)
-
-1. **Two-Factor Authentication**
-   - Install PrestaShop 2FA module
-   - Enforce for all admin accounts
-
-2. **CAPTCHA Implementation**
-   - Add reCAPTCHA to login forms
-   - Reduces brute force effectiveness
-
-3. **Database Prefix Change**
-   ```sql
-   # Change from ps_ to custom prefix
-   # Reduces automated attack success
-   ```
-
-4. **XXE Protection**
-   ```apache
-   # Add specific XXE rules
-   RewriteCond %{HTTP:Content-Type} "application/xml" [NC]
-   RewriteCond %{REQUEST_METHOD} POST
-   RewriteRule ^.*$ - [F,L]
-   ```
-
-### Long-Term Improvements (90 Days)
-
-1. **Full ModSecurity Deployment**
-   - Dedicate time to properly configure ModSecurity
-   - Use OWASP CRS 4.0+
-   - Implement anomaly scoring
-
-2. **Security Information and Event Management (SIEM)**
-   - Splunk, ELK Stack, or cloud solution
-   - Real-time alerting
-   - Threat intelligence integration
-
-3. **Regular Penetration Testing**
-   - Quarterly external pentests
-   - Annual comprehensive assessment
-   - Bug bounty program
-
-4. **Automated Security Scanning**
-   - CI/CD integration
-   - Daily vulnerability scans
-   - Dependency checking
-
-5. **DDoS Protection**
-   - Cloudflare or similar CDN
-   - Rate limiting at network level
-   - Geographic filtering
-
----
-
-## Production Deployment Checklist
-
-Before going live:
-
-- [ ] Remove all development/install directories
-- [ ] Change all default credentials
-- [ ] Implement SSL/TLS (HTTPS only)
-- [ ] Configure automated backups (daily)
-- [ ] Set up monitoring and alerting
-- [ ] Enable fail2ban or similar IPS
-- [ ] Implement CDN with DDoS protection
-- [ ] Configure database encryption at rest
-- [ ] Set up disaster recovery plan
-- [ ] Conduct final penetration test
-- [ ] Train administrators on security procedures
-- [ ] Document incident response procedures
-- [ ] Enable security headers (HSTS, CSP, etc.)
-- [ ] Configure log aggregation
-- [ ] Set up uptime monitoring
-- [ ] Review and update privacy policy
-- [ ] Ensure GDPR/compliance requirements met
-- [ ] Create security runbook
-- [ ] Schedule regular security reviews
-
----
-
-## References
-
-### Official Documentation
-
-- [PrestaShop Security Guide](https://devdocs.prestashop.com/1.7/security/)
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [OWASP ModSecurity Core Rule Set](https://coreruleset.org/)
-- [Apache mod_rewrite Documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
-- [Docker Security Best Practices](https://docs.docker.com/engine/security/)
-
-### Security Testing Resources
-
-- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [SQLMap Documentation](https://github.com/sqlmapproject/sqlmap/wiki)
-- [Burp Suite Documentation](https://portswigger.net/burp/documentation)
-- [OWASP ZAP User Guide](https://www.zaproxy.org/docs/)
-
-### Learning Resources
-
-- [Web Application Hackers Handbook](https://www.wiley.com/en-us/The+Web+Application+Hacker%27s+Handbook%3A+Finding+and+Exploiting+Security+Flaws%2C+2nd+Edition-p-9781118026472)
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-- [HackTheBox](https://www.hackthebox.com/)
-- [TryHackMe](https://tryhackme.com/)
-
----
-
-## Project Files
-
-### Repository Structure
-
-```
-prestashop-security-assessment/
-├── README.md (this file)
-├── docker-compose.yml
-├── screenshots/
-│   ├── 01-baseline/
-│   ├── 02-hardened/
-│   ├── 03-attacks/
-│   ├── 04-tools/
-│   └── 05-waf/
-├── configs/
-│   ├── admin-directory-name.txt
-│   ├── before-hardening-files.txt
-│   ├── after-hardening-files.txt
-│   └── security-headers.txt
-├── waf-config/
-│   └── rules/
-│       └── waf-rules-complete.conf
-├── scripts/
-│   ├── comprehensive-attack-test.sh
-│   ├── test-attacks.sh
-│   └── verify-security.sh
-├── attack-logs/
-│   ├── comprehensive-attack-results.txt
-│   ├── sqlmap-results.txt
-│   ├── nikto-scan.txt
-│   └── apache-access.log
-├── reports/
-│   ├── PrestaShop-Security-Validation-Report-FINAL.md
-│   ├── WAF-Implementation-Report.md
-│   └── prestashop-security-checklist.txt
-└── backups/
-    └── prestashop-backup-YYYYMMDD.sql
-```
-
----
-
-## Contributing
-
-This project is open for contributions! If you:
-- Find security improvements
-- Have better WAF rules
-- Discover new attack vectors
-- Improve the testing methodology
-
-Please open an issue or submit a pull request!
-
----
-
-## License
-
-This project is licensed under the MIT License - feel free to use for educational purposes.
-
----
-
-## Acknowledgments
-
-- **OWASP** for security guidelines and testing methodology
-- **PrestaShop** community for documentation
-- **Docker** team for containerization platform
-- **Kali Linux** for comprehensive security toolkit
-- **Security community** for tools and resources
-
----
-
-## Contact
-
-**Author:** [Your Name]  
-**LinkedIn:** [Your LinkedIn]  
-**GitHub:** [Your GitHub]  
-**Email:** [Your Email]  
 
 **Project Date:** February 13, 2026  
-**Last Updated:** February 13, 2026
+**Last Updated:** February 14, 2026
 
----
 
-## Disclaimer
 
-This project is for **educational purposes only**. Never perform security testing on systems you don't own or have explicit permission to test. Unauthorized access to computer systems is illegal.
-
-The techniques demonstrated here should only be used:
-- On your own systems
-- In authorized penetration tests
-- In legal security assessments
-- For educational learning
-
-**Always obtain written permission before security testing.**
-
----
-
-## Final Thoughts
-
-This project demonstrates that effective security doesn't always require the most complex solutions. Through:
-- Systematic hardening
-- Practical WAF implementation
-- Comprehensive testing
-- Proper documentation
-
-We achieved **89% protection against real-world attacks** and **92% vulnerability reduction**.
-
-The key takeaways:
-1. ✅ Security is a process, not a product
-2. ✅ Simple solutions can be highly effective
-3. ✅ Testing validates security claims
-4. ✅ Documentation enables knowledge sharing
-5. ✅ Persistence through challenges leads to success
-
-**Good luck with your security journey!** 🔐
-
----
-
-**⭐ If you found this helpful, please star the repository!**
 
