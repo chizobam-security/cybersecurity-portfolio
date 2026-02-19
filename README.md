@@ -18,6 +18,8 @@ To develop practical cybersecurity skills, gain exposure to real-world security 
 - Common cyber threats and vulnerabilities
 - Penetration Testing
 - Incident response basics (learning)
+- Cloud security
+- Web application security
 
 ---
 
