@@ -37,6 +37,11 @@ To develop practical cybersecurity skills, gain exposure to real-world security 
 - Basic packet analysis with Wireshark
 - Linux system navigation and permissions
 - Password security and best practice
+- web application security
+- Secure prestashop aws deployment
+- Cloud-iam-privilege escalation
+
+
 
 
 (Labs and projects will be updated regularly as I continue learning.)
