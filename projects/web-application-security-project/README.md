@@ -111,7 +111,7 @@ Medium Issues:  15   =>   2  (87% reduction)
 │  │  └─────────────────────────────────────────────────┘  │   │
 │  └───────────────────────────────────────────────────────┘   │
 │                                                              │
-│  Testing Tools: SQLMap, Burp Suite, OWASP ZAP, Nikto         │
+│  Testing Tools: Burp Suite, OWASP ZAP        │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -164,17 +164,9 @@ sudo apt update
 sudo apt install -y \
     burpsuite \
     zaproxy \
-    sqlmap \
-    nikto \
-    dirb \
-    gobuster \
-    wfuzz \
-    curl \
-    wget
 
 # Verify installations
 sqlmap --version
-nikto -Version
 burpsuite --version
 ```
 
